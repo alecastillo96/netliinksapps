@@ -1,0 +1,4 @@
+localhost
+
+reverse_proxy /api/* localhost:9001
+file_server

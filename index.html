@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NETLIINKS S.A</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/vendors/normalize.css"> <!-- Clear html default style -->
+  <link rel="stylesheet" href="fonts/Inter/inter.css"> <!-- Inter font font-family -->
+  <link rel="stylesheet" href="styles/styles.css">
+
+</head>
+<body>
+  <div class="slider">
+    <div class="netguard">
+      <h1>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Ab est corporis cumque error ex molestiae dolores dolorum incidunt laudantium ad quidem deleniti sapiente voluptatem quam, vero, dolore reprehenderit iure sequi.</h1>
+    </div>
+    <input type="range" value="50" max="100">
+  </div>
+
+  <script>
+    document.querySelector(".slider input").addEventListener("input", function() {
+      document.querySelector(".netguard").style.width = this.value + "%";
+    });
+  </script>
+</body>
+</html>
