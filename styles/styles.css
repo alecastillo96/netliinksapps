@@ -1,41 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'inter', sans-serif;
 }
 
-.slider {
-  width: 100%;
+/* .comp-section {
+  display: block;
   height: 100vh;
-  display: flex;
-  background: url(../images/1.png) no-repeat;
-  background-color: #1D1D1D;
-  background-position: 0 center;
-  background-size: 100vw;
-  position: relative;
 }
 
+.comp-section img {
+  display: block;
+  position: relative;
+  width: 100vw;
+  object-fit: cover;
+}
 
-.slider input {
-  -webkit-appearance: none;
-  width: 100%;
-  background: none;
+.comp-section .title {
+  text-transform: uppercase;
+  font-size: 42px;
+  text-align: center;
+  color: #FFF;
+  letter-spacing: 1.878999px;
+  position: absolute;
+  width: 100vw;
   z-index: 10;
 }
 
-.slider input::-webkit-slider-thumb{
-  -webkit-appearance: none;
-  width: 10px;
-  height: 100vh;
-  background-color: rgba(218, 218, 218, 0.63);
-  cursor: pointer;
+.comp-section .left-section-top {
+  color: #FFF;
+  width: 400px;
+  font-size: 14px;
+  line-height: calc(14 * 2 - 26.3);
+  text-align: right;
+  top: 25%;
+  left: 6%;
+  position: absolute;
+  z-index: 11;
 }
 
-.netguard {
+.comp-section .left-section-bottom {
+  color: #FFF;
+  width: 400px;
+  font-size: 14px;
+  line-height: calc(14 * 2 - 26.3);
+  text-align: right;
+  top: 56%;
+  left: 6%;
   position: absolute;
-  left: 0;
-  width: 20%;
+  z-index: 11;
+}
+*/
+
+
+
+.comp-container {
+  position: relative;
+  height: 100vh; /*should be the same height as the images*/
+}
+
+.comp-section {
+  position: absolute;
+  width: 100vw;
   height: 100vh;
-  background: url(../images/2.png) no-repeat;
-  background-color: #349589;
-  background-position: 0 center;
-  background-size: 100vw;
+  overflow:hidden;
+}
+
+.comp-section img {
+  display:block;
+  vertical-align:middle;
+  width: 100vw;
+}
+
+.comp-slider {
+  position: absolute;
+  z-index: 100;
+  cursor: ew-resize;
+  /*set the appearance of the slider:*/
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  opacity: 0.9;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+.comp-slider::before {
+  content: "<";
+  font-size: 18px;
+  font-weight: 300;
+  color: #4B9787;
+  position: absolute;
+  top: 22%;
+  left: 10%;
+}
+
+.comp-slider::after {
+  content: ">";
+  font-size: 18px;
+  font-weight: 300;
+  color: #4B9787;
+  position: absolute;
+  top: 22%;
+  right: 10%;
 }
